@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Ticket Tracker</title>
+</head>
+<body>
+    <h1>Ticket Tracker</h1>
+    <a href="/add_ticket">Add New Ticket</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Purchase Price</th>
+                <th>Selling Price</th>
+                <th>Profit/Loss</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.event_name }}</td>
+                <td>${{ ticket.purchase_price }}</td>
+                <td>${{ ticket.selling_price }}</td>
+                <td>${{ ticket.profit_loss }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+=======
+    <title>Ticket Portfolio</title>
+</head>
+<body>
+    <h1>My Ticket Portfolio</h1>
+    <a href="{{ url_for('add_ticket') }}">Add New Ticket</a><br><br>
+    <table border="1">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Purchase Price</th>
+            <th>Current Price</th>
+            <th>Profit/Loss</th>
+        </tr>
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ ticket.event_name }}</td>
+            <td>{{ ticket.date }}</td>
+            <td>${{ ticket.purchase_price }}</td>
+            <td>${{ ticket.current_price }}</td>
+            <td>${{ ticket.profit_loss }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Profit/Loss Chart</h2>
+    <img src="{{ profit_loss_chart }}" alt="Profit/Loss Chart">
+>>>>>>> 08ae93a19df8511900a0c9e3565fc7bea4d372c9
+</body>
+</html>

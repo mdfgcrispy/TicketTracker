@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Your Experience</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { display: inline-block; text-align: left; background: #f4f4f4; padding: 20px; border-radius: 10px; }
+        label, input { display: block; margin-bottom: 10px; }
+        button { background-color: #28a745; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h1>Rate Your Experience</h1>
+    <form method="POST">
+        <label>Autonomy (1-10):</label><input type="number" name="autonomy" min="1" max="10" required>
+        <label>Relatedness (1-10):</label><input type="number" name="relatedness" min="1" max="10" required>
+        <label>Competence (1-10):</label><input type="number" name="competence" min="1" max="10" required>
+        <label>Vitality (1-10):</label><input type="number" name="vitality" min="1" max="10" required>
+        <label>Social Comparison (1-10):</label><input type="number" name="social_comparison" min="1" max="10" required>
+        <label>Monetary Impact (-50 to 50):</label><input type="number" name="monetary_impact" min="-50" max="50" required>
+        <button type="submit">Calculate EV</button>
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

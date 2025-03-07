@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EV Score Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        .container { background: #f4f4f4; padding: 20px; border-radius: 10px; display: inline-block; }
+        h1 { color: #28a745; }
+        .ev-score { font-size: 24px; font-weight: bold; color: #007bff; }
+        a { display: block; margin-top: 20px; color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Experience Value Score</h1>
+        <p>Your EV Score is: <span class="ev-score">{{ ev_score }}</span>/10</p>
+        <a href="/experience">Rate Another Experience</a>
+    </div>
+</body>
+</html>
